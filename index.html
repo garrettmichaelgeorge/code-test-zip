@@ -8,7 +8,42 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	
+	<header class="header">
+		<h1 class="title">Zip Code Finder</h1>
+	</header>
+
+	<main class="main">
+
+		<section class="section">
+			<form id="form-zip-code" class="form">
+				<fieldset class="fieldset">
+					<label for="input-zip-code">Zip code</label>
+					<input id="input-zip-code" type="text" class="input" />
+				</fieldset>
+				<button id="button-submit" class="button">
+					Search
+				</button>
+			</form>
+		</section>
+
+		<section class="section">
+			<dl id="target" class="result">
+			</dl>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<p>
+		<small>This is a solution to the Zip Code Finder test by Deep Space Robots.</small>
+		</p>
+	</footer>
+
+	<template id="template">
+		<dt class="result__key"></dt>
+		<dd class="result__value"></dd>
+	</template>
+
 	<script src="script.js"></script>
 </body>
 </html>
