@@ -4,29 +4,43 @@
 	<title>Zip Code</title>
 	<meta name="description" content="A frontend dev aptitude test by Deep Space Robots.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+	<!-- Adobe Fonts -->
+	<link rel="stylesheet" href="https://use.typekit.net/yyc6trg.css">
+
 	<link rel="stylesheet" href="reset.css">
 	<link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="body dark-mode">
 	<header class="header">
-		<h1 class="title">Zip Code Finder</h1>
+		<h1 class="title">
+			Zip Code
+			<br />
+			<span class="title__emphasis">
+				Finder
+			</span>
+		</h1>
 	</header>
 
 	<main class="main">
 
 		<section class="section">
 			<form id="form-zip-code" class="form">
-				<fieldset class="fieldset">
-					<label for="input-zip-code">Zip code</label>
-					<input id="input-zip-code" type="text" class="input" />
+				<fieldset class="form__field">
+					<label for="input-zip-code" class="form__label">Zip code</label>
+					<input id="input-zip-code" type="text" class="form__input" />
 				</fieldset>
-				<button id="button-submit" class="button">
+				<button id="button-submit" class="button form__button">
 					Search
 				</button>
 			</form>
 		</section>
 
-		<section class="section">
+		<section class="section section--result">
 			<dl id="target" class="result">
 			</dl>
 		</section>
@@ -35,7 +49,7 @@
 
 	<footer class="footer">
 		<p>
-		<small>This is a solution to the Zip Code Finder test by Deep Space Robots.</small>
+			<small>This is a solution to the Zip Code Finder test by Deep Space Robots.</small>
 		</p>
 	</footer>
 

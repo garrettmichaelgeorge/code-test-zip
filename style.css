@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box
+}
+
+/* Variables */
+:root {
+  --spacing-unit: 1rem;
+  --timing-unit: 300ms;
+  --easing-type: ease-in;
+  --font-family-body: itc-avant-garde-gothic-pro, sans-serif;
+  --font-family-headings: itc-avant-garde-gothic-pro, sans-serif;
+  --line-height: 1.4;
+  --font-size-sm: 0.8rem;
+  --color-black: #333333;
+  --color-white: #EEEEEE;
+  --color-blue: blue;
+  --text-black: #333333;
+  --text-white: #EFEFEF;
+}
+
+/* Layout */
+.body {
+  padding: var(--spacing-unit);
+  display: grid;
+  grid-template-rows: 150px auto 150px;
+}
+
+.header {
+  grid-row: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  grid-row: 2 / 2;
+  display: grid;
+}
+
+.footer {
+  grid-row: 3 / 3;
+}
+
+.section, .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Spacing */
+.body {
+  margin-top: calc(6 * var(--spacing-unit));
+}
+
+.section {
+  padding: calc(2 * var(--spacing-unit)) 0;
+}
+
+.form__field {
+  margin-bottom: var(--spacing-unit);
+}
+
+.result__value {
+  margin-bottom: var(--spacing-unit);
+}
+
+/* Typography */
+body {
+  font-family: var(--font-family-body);
+  line-height: var(--line-height);
+}
+
+small {
+  font-size: var(--font-size-sm);
+}
+
+h1, h2, h3, h4, h5, h6, .heading {
+  font-family: var(--font-family-headings);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 4rem;
+  line-height: 0.9;
+}
+
+.title__emphasis {
+  font-size: 6rem;
+  font-style: italic;
+  margin-left: -0.25em;
+}
+
+/* Color */
+.dark-mode {
+  background-color: var(--color-black);
+  color: var(--text-white);
+}
+
+.light-mode {
+  background-color: var(--color-white);
+  color: var(--text-black);
+}
+
+/* Components */
+.form__input {
+  display: block;
+  font: inherit;
+  padding: calc(0.25 * var(--spacing-unit));
+}
+
+.button {
+  padding: var(--spacing-unit);
+  color: inherit;
+  font: inherit;
+  font-weight: 700;
+  background-color: var(--color-blue);
+  border: none;
+  box-shadow: none;
+  transition: all var(--timing-unit) var(--easing-type);
+}
+
+.button:hover {
+  box-shadow: 10px 10px var(--color-white);
+}
+
+.light-mode .button:hover {
+  box-shadow: 10px 10px var(--color-black);
+}
+
+.button:active {
+  box-shadow: 0 0 0 100vh var(--color-white);
+}
+
+.light-mode .button:active {
+  box-shadow: 0 0 0 100vh var(--color-black);
+}
+
+.result__key {
+  font-weight: 700;
+}
+
+.result__value {
+  display: inline-block;
+}
